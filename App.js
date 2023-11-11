@@ -5,6 +5,7 @@ import { Dimensions } from 'react-native'
 import styles from './style';
 import * as Font from 'expo-font';
 import Navbar from './components/major/navbar/main';
+import QuickActionBar from './components/minor/quickCall/main';
 
 export default function App() {
 
@@ -39,7 +40,7 @@ export default function App() {
 
     const renderItem = ({item, index}) => {
       return (
-        <View style={{backgroundColor: "#000", width: 100, height: 50, marginRight: 30}}></View>
+        <View style={[styles.widget, {marginLeft: index == 0 ? 30 : 0}, {marginRight: index == data.length - 1 ? 30 : 25}]}></View>
       )
     }
 
@@ -51,7 +52,7 @@ export default function App() {
 
           <Navbar /> 
 
-          <View style={styles.widgetContainer}>
+          <View style={[styles.widgetContainer, {marginTop: 70}]}>
 
             {/* Section 1 */}
             <View>
@@ -60,8 +61,6 @@ export default function App() {
 
 
             </View>
-
-
           </View>
           <FlatList 
                 horizontal={true}
@@ -73,7 +72,18 @@ export default function App() {
                 showsHorizontalScrollIndicator={false}
 
               />
+          <View style={[styles.widgetContainer, {marginTop: 30}]}>
+          <QuickActionBar />
+          {/* Section 1 */}
+          <View style={{marginTop: 35}}>
+            <Text style={styles.sectionHeader}>Find research projects</Text>
+            <Text style={styles.sectionSubText}>View what professors are working on.</Text>
 
+
+          </View>
+
+
+          </View>
       </SafeAreaView>
     </View>
   );

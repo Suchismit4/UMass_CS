@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingLeft: 40,
-        paddingTop: 45,
-        paddingRight: 40
+        paddingLeft: 30,
+        paddingTop: 50,
+        paddingRight: 30
     },
     logo: {
         width: 159,

@@ -8,9 +8,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#ecf0f1', // off-white color
     },
     widgetContainer: {
-        paddingLeft: 40,
-        paddingRight: 40,
-        marginTop: 70
+        paddingLeft: 30,
+        paddingRight: 30,
     },
     sectionHeader: {
         fontFamily: 'ClashDisplay',
@@ -18,7 +17,14 @@ const styles = StyleSheet.create({
     },
     sectionSubText: {
         fontSize: 15,
-        marginTop: 7
+        marginTop: 7,
+        marginBottom: 30
+    },
+    widget: {
+        height: 170,
+        width: 310,
+        backgroundColor: "#D9D9D9",
+        borderRadius: 5,
     }
 })
 
