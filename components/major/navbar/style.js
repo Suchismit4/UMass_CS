@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingLeft: 30,
         paddingTop: 50,
-        paddingRight: 30
+        paddingRight: 30,
+        paddingBottom: 40,
     },
     logo: {
         width: 159,

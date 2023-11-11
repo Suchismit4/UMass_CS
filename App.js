@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useRef, useState, useEffect, useCallback,  } from 'react';
-import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { FlatList, SafeAreaView, StyleSheet, Text, View, ScrollView} from 'react-native';
 import { Dimensions } from 'react-native'
 import styles from './style';
 import * as Font from 'expo-font';
@@ -51,8 +51,8 @@ export default function App() {
       <SafeAreaView>
 
           <Navbar /> 
-
-          <View style={[styles.widgetContainer, {marginTop: 70}]}>
+          <ScrollView>
+          <View style={[styles.widgetContainer, {marginTop: 30}]}>
 
             {/* Section 1 */}
             <View>
@@ -82,8 +82,18 @@ export default function App() {
 
           </View>
 
-
           </View>
+          <FlatList 
+                horizontal={true}
+                data={data}
+                renderItem={renderItem}
+                keyExtractor= {item => item}
+                decelerationRate={'slow'}
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+
+              />
+              </ScrollView>
       </SafeAreaView>
     </View>
   );
