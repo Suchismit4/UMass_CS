@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useRef, useState, useEffect, useCallback,  } from 'react';
-import { FlatList, SafeAreaView, StyleSheet, Text, View, ScrollView} from 'react-native';
+import { FlatList, SafeAreaView, Text, View, ScrollView} from 'react-native';
 import { Dimensions } from 'react-native'
 import styles from './style';
 import * as Font from 'expo-font';
@@ -67,7 +67,6 @@ export default function App() {
                 data={data}
                 renderItem={renderItem}
                 keyExtractor= {item => item}
-                decelerationRate={'slow'}
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}
 
@@ -88,7 +87,6 @@ export default function App() {
                 data={data}
                 renderItem={renderItem}
                 keyExtractor= {item => item}
-                decelerationRate={'slow'}
                 showsVerticalScrollIndicator={false}
                 showsHorizontalScrollIndicator={false}
 
