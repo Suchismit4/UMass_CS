@@ -12,7 +12,7 @@ export default function Navbar() {
             />
             <Image
                 style={styles.searchIcon}
-                source={{uri: 'https://i.imgur.com/C6shUzE.png'}}
+                source={{uri: 'https://i.imgur.com/vOH0het.png'}}
             />
         </View>
     )

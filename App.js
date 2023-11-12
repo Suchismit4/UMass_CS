@@ -1,7 +1,5 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { FlatList, SafeAreaView, Text, View, ScrollView } from "react-native";
-import { Dimensions } from "react-native";
+import { FlatList, SafeAreaView, Text, View, ScrollView, ImageBackground, TouchableOpacity, Image } from "react-native";
 import styles from "./style";
 import * as Font from "expo-font";
 import Navbar from "./components/major/navbar/main";
@@ -36,19 +34,36 @@ export default function App() {
     return null;
   }
 
-  const renderItem = ({ item, index }) => {
+  const renderProjects = ({ item, index }) => {
     return (
-      <View
-        style={[
-          styles.widget,
-          { marginLeft: index == 0 ? 30 : 0 },
-          { marginRight: index == data.length - 1 ? 30 : 25 },
-        ]}
-      ></View>
+      <TouchableOpacity>
+        <View
+          style={[
+            styles.widget,
+            { marginLeft: index == 0 ? 30 : 0 },
+            { marginRight: index == projects.length - 1 ? 30 : 25 },
+          ]}
+        >
+          <ImageBackground source={{uri: 'https://i.imgur.com/qeGhWee.png'}} resizeMode="cover" style={styles.image}>
+            <Text style={styles.textHeader}>{item.name}</Text>
+            <Text style={styles.textOneliner}>{item.desc}</Text>
+            <View style={styles.creatorContainer}>
+              <Image style={styles.iconForMaker} source={{uri: 'https://i.imgur.com/UPgjPaH.png'}} />
+              <View>
+                <Text style={styles.whoMade}>{item.username}</Text>
+                <Text style={styles.whoAll}>and {item.teamSize} others...</Text>
+
+              </View>
+            </View>
+          </ImageBackground>
+        </View>
+      </TouchableOpacity>
+      
     );
   };
 
-  const data = [1, 2, 3, 4, 5, 6, 7];
+  // You can add more projects
+  const projects = [{name: "Project #1", username: 'Stella Dey', teamSize: 17, desc: 'A scheduling app for college students.'}] 
 
   return (
     <View onLayout={onLayoutRootView} style={styles.container}>
@@ -68,8 +83,8 @@ export default function App() {
           </View>
           <FlatList
             horizontal={true}
-            data={data}
-            renderItem={renderItem}
+            data={projects}
+            renderItem={renderProjects}
             keyExtractor={(item) => item}
             showsVerticalScrollIndicator={false}
             showsHorizontalScrollIndicator={false}
@@ -86,8 +101,8 @@ export default function App() {
           </View>
           <FlatList
             horizontal={true}
-            data={data}
-            renderItem={renderItem}
+            data={projects}
+            renderItem={renderProjects}
             keyExtractor={(item) => item}
             showsVerticalScrollIndicator={false}
             showsHorizontalScrollIndicator={false}
