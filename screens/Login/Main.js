@@ -4,7 +4,7 @@ import styles from './style'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import * as Font from "expo-font";
 
 const Login = ({navigation}) => {
   const [fontLoaded, setFontLoaded] = useState(false);
@@ -15,7 +15,7 @@ const Login = ({navigation}) => {
     (async () => {
       try {
         await Font.loadAsync({
-          ClashDisplay: require("./assets/fonts/ClashDisplay.ttf"),
+          ClashDisplay: require("../../assets/fonts/ClashDisplay.ttf"),
         });
         setFontLoaded(true);
       } catch (error) {
