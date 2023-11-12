@@ -1,6 +1,7 @@
 import { StyleSheet} from 'react-native';
 
 
+
 // Styling for the main window that covers everything
 const styles = StyleSheet.create({
     container: {
