@@ -5,34 +5,8 @@ import * as Font from "expo-font";
 import Navbar from "../../components/major/navbar/main";
 import QuickActionBar from "../../components/minor/quickCall/main";
 
-export default function App() {
-  const [fontLoaded, setFontLoaded] = useState(false);
-  const [fontError, setFontError] = useState(false);
-
-  //
-  useEffect(() => {
-    (async () => {
-      try {
-        await Font.loadAsync({
-          ClashDisplay: require("../../assets/fonts/ClashDisplay.ttf"),
-        });
-        setFontLoaded(true);
-      } catch (error) {
-        setFontError(true);
-        console.error("Error loading font", error);
-      }
-    })();
-  }, []);
-
-  const onLayoutRootView = useCallback(async () => {
-    if (fontLoaded || fontError) {
-      await console.log("Loaded font..");
-    }
-  }, [fontLoaded, fontError]);
-
-  if (!fontLoaded && !fontError) {
-    return null;
-  }
+export default function Home() {
+  
 
   const renderProjects = ({ item, index }) => {
     return (
@@ -66,7 +40,7 @@ export default function App() {
   const projects = [{name: "Project #1", username: 'Stella Dey', teamSize: 17, desc: 'A scheduling app for college students.'}] 
 
   return (
-    <View onLayout={onLayoutRootView} style={styles.container}>
+    <View style={styles.container}>
       <SafeAreaView>
         <Navbar />
         <ScrollView>
