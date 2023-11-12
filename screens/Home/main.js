@@ -18,7 +18,7 @@ export default function Home() {
             { marginRight: index == projects.length - 1 ? 30 : 25 },
           ]}
         >
-          {/* <ImageBackground source={{uri: 'https://i.imgur.com/qeGhWee.png'}} resizeMode="cover" style={styles.image}>
+          <ImageBackground source={{uri: 'https://i.imgur.com/qeGhWee.png'}} resizeMode="cover" style={styles.image}>
             <Text style={styles.textHeader}>{item.name}</Text>
             <Text style={styles.textOneliner}>{item.desc}</Text>
             <View style={styles.creatorContainer}>
@@ -29,7 +29,7 @@ export default function Home() {
 
               </View>
             </View>
-          </ImageBackground> */}
+          </ImageBackground>
         </View>
       </TouchableOpacity>
       
@@ -37,8 +37,8 @@ export default function Home() {
   };
 
   // You can add more projects
-  // const projects = [{name: "Project #1", username: 'Stella Dey', teamSize: 17, desc: 'A scheduling app for college students.'}] 
-  const projects = [1, 2, 3, 4]
+  const projects = [{name: "Project #1", username: 'Stella Dey', teamSize: 17, desc: 'A scheduling app for college students.'}] 
+  // const projects = [1, 2, 3, 4]
 
   return (
     <View style={styles.container}>
