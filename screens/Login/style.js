@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        
+        backgroundColor: "#ecf0f1"
     },
     image: {
         flex: 1,
@@ -18,16 +18,16 @@ const styles = StyleSheet.create({
         width: 300,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
-        
-        paddingTop: 50,
-        paddingBottom: 50
+        backgroundColor: "#881D1C",        
+        paddingTop: 35,
+        paddingBottom: 35,
+        borderRadius: 8
     },
 
     inputView: {
         width: '80%',
-        backgroundColor:"white",
-        borderRadius:25,
+        backgroundColor: "#ECF0F1",
+        borderRadius: 8,
         height:50,
         marginBottom:20,
         justifyContent:"center",

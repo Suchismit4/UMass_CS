@@ -53,19 +53,18 @@ const Login = ({navigation}) => {
 
   return (
     <View onLayout = {onLayoutRootView} style={styles.container}>
-    <ImageBackground source={{uri: 'https://i.imgur.com/TnuUx4n.png'}} resizeMode="cover" style={styles.image} imageStyle={{opacity:1}}>
       
       <View style={styles.loginBox}>
-      <Text style={{marginBottom: 20, fontSize: 20, color: 'black'}}>Login</Text>
-        <View style={styles.inputView}>
-          <TextInput onChangeText = {(text) => setDetails({email: text})} placeholder="email" placeholderTextColor="#003f5c" style={styles.inputText}/>
+        <View>
+          <Text style={{marginBottom: 20, fontSize: 20, color: 'black'}}>Login</Text>
         </View>
         <View style={styles.inputView}>
-          <TextInput onChangeText = {(text) => setDetails({email: text})} placeholder="password" placeholderTextColor="#003f5c" style={styles.inputText}/>
+          <TextInput onChangeText = {(text) => setDetails({email: text})} placeholder="Enter your mail" placeholderTextColor="#003f5c" style={styles.inputText}/>
         </View>
-        <TouchableOpacity onPress = {onPressForgotPassword} style={{marginTop: 30}}>
-            <Text style={styles.forgotAndSignUpText}>Forgot Password?</Text>
-        </TouchableOpacity>
+        <View style={styles.inputView}>
+          <TextInput onChangeText = {(text) => setDetails({email: text})} placeholder="Your password" placeholderTextColor="#003f5c" style={styles.inputText}/>
+        </View>
+       
         <TouchableOpacity onPress = {onPressLogin} style={styles.loginBtn}>
             <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
@@ -75,7 +74,6 @@ const Login = ({navigation}) => {
         </TouchableOpacity>
         </View>
       
-      </ImageBackground>
     </View>
   )
 }
