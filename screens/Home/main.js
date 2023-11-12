@@ -18,11 +18,11 @@ export default function Home() {
             { marginRight: index == projects.length - 1 ? 30 : 25 },
           ]}
         >
-          <ImageBackground source={{uri: 'https://i.imgur.com/qeGhWee.png'}} resizeMode="cover" style={styles.image}>
+          <ImageBackground resizeMode="cover" style={styles.image}>
             <Text style={styles.textHeader}>{item.name}</Text>
             <Text style={styles.textOneliner}>{item.desc}</Text>
             <View style={styles.creatorContainer}>
-              <Image style={styles.iconForMaker} source={{uri: 'https://i.imgur.com/UPgjPaH.png'}} />
+              {/* <Image style={styles.iconForMaker} source={{uri: 'https://i.imgur.com/UPgjPaH.png'}} /> */}
               <View>
                 <Text style={styles.whoMade}>{item.username}</Text>
                 <Text style={styles.whoAll}>and {item.teamSize} others...</Text>
